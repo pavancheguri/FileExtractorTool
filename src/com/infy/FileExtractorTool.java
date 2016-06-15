@@ -114,7 +114,7 @@ public class FileExtractorTool extends JFrame {
 
     			for(int i=0;i<filesList.size();i++){
     				PrintWriter  buf=new PrintWriter (
-    						new FileWriter ("C:/Temp/Generate/" + filesList.get(i) + ".txt")  );
+    						new FileWriter ("C:/Temp/" + filesList.get(i) + ".txt")  );
     				for(int j=0;j<properties.size();j++){
     					if(i==j){
     						buf.write(properties.get(j));
@@ -125,6 +125,7 @@ public class FileExtractorTool extends JFrame {
     			}
     			JOptionPane.showMessageDialog(mainFrame,"Successfully Executed!","Alert",JOptionPane.INFORMATION_MESSAGE);
     			statusbar.setText("Execution successful");
+    			System.exit( 0 );  
     			
     		}catch(Exception e){
     			e.printStackTrace();
